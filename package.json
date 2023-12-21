@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.0.15",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "dayjs": "^1.11.10",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
@@ -22,6 +25,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "postcss": "^8",
+    "prettier-plugin-tailwindcss": "^0.5.9",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
