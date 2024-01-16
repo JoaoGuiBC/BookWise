@@ -1,7 +1,9 @@
+import Link from 'next/link'
+import type { Metadata } from 'next'
 import { CaretRight, ChartLineUp } from '@phosphor-icons/react/dist/ssr'
 
+import { PageTitle } from '@/components/page-title'
 import { LargeCard, SmallCard } from '@/components/book-card'
-import Link from 'next/link'
 
 const examples = [
   {
@@ -40,13 +42,14 @@ const examples = [
   },
 ]
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Início',
+}
+
+export default function Page() {
   return (
-    <div className="flex w-screen flex-1 flex-col gap-10 px-24 py-20">
-      <h1 className="mb-10 flex gap-3 text-2xl text-gray-100">
-        <ChartLineUp className="h-8 w-8 text-green-100" />
-        Início
-      </h1>
+    <>
+      <PageTitle IconTitle={ChartLineUp} title="Início" />
 
       <div className="flex gap-16">
         <main className="w-full">
@@ -80,7 +83,7 @@ export default function Home() {
 
             <Link
               href="/"
-              className="flex items-center gap-2 px-2 text-sm/6 font-bold text-purple-100"
+              className="flex items-center gap-2 px-2 text-sm/6 font-bold text-purple-100 hover:text-purple-300"
             >
               Ver todos <CaretRight className="h-4 w-4" />
             </Link>
@@ -114,6 +117,6 @@ export default function Home() {
           </div>
         </aside>
       </div>
-    </div>
+    </>
   )
 }

@@ -7,14 +7,19 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    backgroundImage: {
-      'gradient-vertical': 'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
-      'gradient-horizontal': 'linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)',
-    },
-    fontFamily: {
-      sans: 'var(--font-nunito)',
-    },
     extend: {
+      gridTemplateColumns: {
+        app: '15.25rem 1fr',
+      },
+      backgroundImage: {
+        'gradient-vertical':
+          'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
+        'gradient-horizontal':
+          'linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)',
+      },
+      fontFamily: {
+        sans: 'var(--font-nunito)',
+      },
       colors: {
         gray: {
           100: '#F8F9FC',

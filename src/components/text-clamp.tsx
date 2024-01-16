@@ -32,7 +32,7 @@ export function TextClamp({ children }: { children: ReactNode }) {
 
         {isTruncated && (
           <button
-            className="sticky bottom-0 float-right h-fit w-fit bg-gray-700 px-1 font-bold text-purple-100"
+            className="sticky bottom-0 float-right h-fit w-fit bg-gray-700 px-1 font-bold text-purple-100 hover:text-purple-300"
             onClick={() => setIsClamped(!isClamped)}
           >
             {isClamped ? '... ver mais' : 'ver menos'}

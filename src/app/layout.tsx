@@ -6,7 +6,10 @@ import { Nunito_Sans as NuninoSans } from 'next/font/google'
 const nunitoSans = NuninoSans({ subsets: ['latin'], variable: '--font-nunito' })
 
 export const metadata: Metadata = {
-  title: 'BookWise',
+  title: {
+    template: '%s | BookWise',
+    default: 'BookWise',
+  },
 }
 
 export default function RootLayout({

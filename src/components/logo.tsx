@@ -1,6 +1,7 @@
 export function Logo() {
   return (
     <svg
+      className="z-20"
       width={128}
       height={32}
       viewBox="0 0 128 32"
