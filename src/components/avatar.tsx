@@ -8,7 +8,7 @@ interface AvatarProps {
 export function Avatar({ size, source }: AvatarProps) {
   return (
     <div
-      className={`mr-4 h-[${size}] w-[${size}] rounded-full bg-gradient-vertical p-px`}
+      className={`h-[${size}] w-[${size}] rounded-full bg-gradient-vertical p-px`}
     >
       <Image
         className="rounded-full"

@@ -41,6 +41,20 @@ const config: Config = {
           200: '#2A2879',
         },
       },
+      keyframes: {
+        'show-overlay': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        'show-content': {
+          from: { opacity: '0', transform: 'translateX(50%) scale(0.96)' },
+          to: { opacity: '1', transform: 'translateX(0) scale(1)' },
+        },
+      },
+      animation: {
+        'show-overlay': 'show-overlay 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'show-content': 'show-content 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+      },
     },
   },
   plugins: [],

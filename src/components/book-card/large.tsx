@@ -37,7 +37,7 @@ export function LargeCard({ book, critic, review }: LargeCardProps) {
       <div className="mb-8 flex items-center">
         <Avatar source={critic.userImage} size={40} />
 
-        <div>
+        <div className="ml-4">
           <p className="leading-relaxed">{critic.name}</p>
           <p className="text-sm leading-snug text-gray-400">Há {reviewDate}</p>
         </div>

@@ -17,6 +17,7 @@ export function Menu() {
           alt="background gradient"
           width={224}
           height={988}
+          quality={100}
           className="absolute bottom-0 left-0 right-0 top-0 h-full w-56"
         />
 
