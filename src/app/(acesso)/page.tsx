@@ -82,7 +82,7 @@ export default function Page() {
             <p className="mr-auto text-sm text-gray-100">Livros populares</p>
 
             <Link
-              href="/"
+              href="/explorar"
               className="flex items-center gap-2 px-2 text-sm/6 font-bold text-purple-100 hover:text-purple-300"
             >
               Ver todos <CaretRight className="h-4 w-4" />

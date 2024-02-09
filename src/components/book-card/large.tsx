@@ -25,7 +25,7 @@ interface ReviewData {
 
 interface LargeCardProps {
   book: BookData
-  critic: CriticData
+  critic?: CriticData
   review: ReviewData
 }
 
@@ -34,16 +34,20 @@ export function LargeCard({ book, critic, review }: LargeCardProps) {
 
   return (
     <div className="mb-3 rounded-lg bg-gray-700 p-6">
-      <div className="mb-8 flex items-center">
-        <Avatar source={critic.userImage} size={40} />
+      {critic && (
+        <div className="mb-8 flex items-center">
+          <Avatar source={critic.userImage} size={40} />
 
-        <div className="ml-4">
-          <p className="leading-relaxed">{critic.name}</p>
-          <p className="text-sm leading-snug text-gray-400">Há {reviewDate}</p>
+          <div className="ml-4">
+            <p className="leading-relaxed">{critic.name}</p>
+            <p className="text-sm leading-snug text-gray-400">
+              Há {reviewDate}
+            </p>
+          </div>
+
+          <RatingBar className="ml-auto" score={review.score} />
         </div>
-
-        <RatingBar className="ml-auto" score={review.score} />
-      </div>
+      )}
 
       <div className="inline-flex h-full items-start justify-start gap-5">
         <Image
@@ -59,6 +63,8 @@ export function LargeCard({ book, critic, review }: LargeCardProps) {
           <span className="text-sm font-normal leading-snug text-gray-400">
             {book.author}
           </span>
+
+          {!critic && <RatingBar className="ml-auto" score={review.score} />}
 
           <TextClamp>{review.review}</TextClamp>
         </div>
