@@ -10,6 +10,7 @@
     "migrate": "dotenv -e .env.local -- pnpm prisma migrate dev"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.7",
     "@phosphor-icons/react": "^2.0.15",
     "@prisma/client": "5.9.1",
     "@radix-ui/react-dialog": "^1.0.5",

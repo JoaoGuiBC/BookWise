@@ -1,10 +1,11 @@
-import { Avatar } from '@/components/avatar'
 import {
   BookOpen,
   BookmarkSimple,
   Books,
   UserList,
 } from '@phosphor-icons/react/dist/ssr'
+
+import { Avatar } from '@/components/avatar'
 
 export function UserDataMenu() {
   return (
