@@ -14,13 +14,13 @@ interface CriticData {
 interface BookData {
   title: string
   author: string
+  synopsis: string
   coverImage: string
 }
 
 interface ReviewData {
   date: string
   score: number
-  review: string
 }
 
 interface LargeCardProps {
@@ -30,7 +30,7 @@ interface LargeCardProps {
 }
 
 export function LargeCard({ book, critic, review }: LargeCardProps) {
-  const reviewDate = dayjs().subtract(3, 'hour').from(dayjs(review.date), true)
+  const reviewDate = dayjs().from(dayjs(review.date), true)
 
   return (
     <div className="mb-3 rounded-lg bg-gray-700 p-6">
@@ -66,7 +66,7 @@ export function LargeCard({ book, critic, review }: LargeCardProps) {
 
           {!critic && <RatingBar className="ml-auto" score={review.score} />}
 
-          <TextClamp>{review.review}</TextClamp>
+          <TextClamp>{book.synopsis}</TextClamp>
         </div>
       </div>
     </div>

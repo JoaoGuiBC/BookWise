@@ -10,12 +10,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Book {
+model User {
+  id String @id
+
+  name   String
+  avatar String
+
+  reviews Review[]
+
+  @@map("users")
+}
+
+model Review {
   id Int @id @default(autoincrement())
 
-  title    String
-  synopsis String
-  cover    String
+  title      String
+  author     String
+  synopsis   String
+  coverImage String
+  score      Int
 
-  @@map("books")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user_id String
+  critic  User   @relation(fields: [user_id], references: [id])
+
+  @@index([user_id, title])
+  @@map("reviews")
 }
